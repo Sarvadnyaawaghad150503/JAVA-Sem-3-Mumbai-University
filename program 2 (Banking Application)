@@ -1,0 +1,114 @@
+Question : -
+
+Write a Menu driven
+program in java to
+implement simple banking
+application. Application
+should read the customer
+name, account number,
+initial balance,rate of
+interest, contact number
+and address field etc.
+Application should have
+following methods.
+1. createAccount()
+2. deposit()
+3. withdraw()
+4. computeInterest()
+5. displayBalance()
+
+code:
+
+import java.util.Scanner;
+
+public class Bank {
+    String name, address;
+    int acc_no;
+    long contact_no;
+    double balance, new_balance, amt_dep, amt_withdraw, interest;
+    Scanner s = new Scanner(System.in);
+
+    void input() {
+        System.out.print("Enter name=");
+        name = s.next();
+        System.out.print("Enter Address=");
+        address = s.next();
+        System.out.print("Enter Contact no. =");
+        contact_no = s.nextInt();
+        System.out.print("Enter account no. =");
+        acc_no = s.nextInt();
+    }
+
+    void createAccount() {
+        System.out.println();
+        System.out.println("Account No.=" + acc_no);
+        System.out.println("Name of Account holder=" + name);
+        System.out.println("Address of Account holder=" + address);
+        System.out.println("Contact no. =" + contact_no);
+        System.out.println("A new account has been created!");
+        System.out.println();
+    }
+
+    void deposit() {
+        System.out.println("Enter amount to be deposited=");
+        amt_dep = s.nextInt();
+        System.out.println("Amount deposited!");
+        System.out.println();
+    }
+
+    int computeInterest() {
+        interest = 0.07 * amt_dep;
+        System.out.println("Interest=" + interest);
+        balance = amt_dep + interest;
+        return 0;
+    }
+
+    void withdraw() {
+        System.out.println("Enter amount to be withdrawn=");
+        amt_withdraw = s.nextInt();
+        System.out.println("Amount withdrawn!");
+        System.out.println();
+    }
+
+    int displayBalance() {
+        new_balance = balance - amt_withdraw;
+        System.out.println("Balance=" + new_balance);
+        System.out.println();
+        return 0;
+    }
+
+    public static void main(String[] args) {
+        int n;
+        Scanner s = new Scanner(System.in);
+        System.out.println("SARVADNYA_AWAGHAD_D10A_05");
+        Bank a = new Bank();
+        do {
+            System.out.println("Choose an Option :");
+            System.out.println("1.Create an account");
+            System.out.println("2.Deposit ");
+            System.out.println("3.Withdraw ");
+            System.out.println("4.Balance ");
+            System.out.println("5.Exit ");
+
+            n = s.nextInt();
+            switch (n) {
+                case 1:
+                    a.input();
+                    a.createAccount();
+                    break;
+                case 2:
+                    a.deposit();
+                    break;
+                case 3:
+                    a.withdraw();
+                    break;
+                case 4:
+                    a.computeInterest();
+                    a.displayBalance();
+                    break;
+                case 5:
+                    break;
+            }
+        } while (n != 5);
+    }
+}

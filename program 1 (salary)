@@ -1,0 +1,47 @@
+// Question : - - Implement a java
+program to calculate gross
+salary
+& net salary taking the
+following data.
+Input: empno, empname,
+basic
+Process:
+DA=70% of basic
+HRA=30% of basic
+CCA=Rs240/-
+PF=10% of basic
+PT= Rs100/-
+
+code:
+import java.util.Scanner;
+public class Salary{
+    public static void main(String[] args){
+        int emp_no;
+        float basic,da, hra, cca, pt, pf;
+        float gross, net;
+        String emp_name;
+        Scanner s= new Scanner(System.in);
+        System.out.println("SARVADNYA_AWAGHAD_D10_A_05");
+        System.out.println("Enter employee no.=");
+        emp_no= s.nextInt();
+        System.out.println("Enter employee name= ");
+        emp_name= s.next();
+        System.out.println("Enter basic salary=");
+        basic= s.nextFloat();
+        da=(70*basic)/100;
+        System.out.println("DA is= "+da);
+        hra=(30*basic)/100;
+        System.out.println("HRA is= "+hra);
+        cca=240;
+        System.out.println("CCA is= "+cca);
+        gross=basic+da+hra+cca;
+        System.out.println("Gross salary is="+gross);
+        pf=(10*basic)/100;
+        System.out.println("PF is= "+pf);
+        pt=100;
+        System.out.println("PT is="+pt);
+        net=gross-pf-pt;
+        System.out.println("Net salary is="+net);
+    }
+}
+

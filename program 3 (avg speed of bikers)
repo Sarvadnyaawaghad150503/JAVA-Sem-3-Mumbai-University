@@ -1,0 +1,71 @@
+
+Question : - Five Bikers Compete in
+a race such that they drive
+at a constant speed which
+may or may not be
+the same as the other. To
+qualify the race, the speed
+of a racer must be more
+than the average
+speed of all 5 racers.
+Write a Java program to
+take as input the speed of
+each racer and print back
+the speed of qualifying racers
+
+code:
+
+import java.util.Scanner;
+public class Speed_bikers {
+public static void main(String[] args) {
+Scanner S=new Scanner(System.in);
+System.out.println("speed of 1st biker ");
+float first=S.nextFloat();
+System.out.printf(" %f\n\n",first);
+System.out.println("speed of 2nd biker ");
+float Sec=S.nextFloat();
+System.out.printf(" %f\n\n",Sec);
+System.out.println("speed of 3rd biker ");
+float Third=S.nextFloat();
+System.out.printf(" %f\n\n",Third);
+System.out.println("speed of 4th biker ");
+float fourth=S.nextFloat();
+System.out.printf(" %f\n\n",fourth);
+System.out.println("speed of 5th biker ");
+float fifth=S.nextFloat();
+System.out.printf(" %f\n\n",fifth);
+float Average= (first + Sec + Third + fourth + fifth)/5 ;
+System.out.println("\nAverage of all bikers:"+Average);
+if(first>Average) {
+System.out.printf("\nFirst qualified \nHis speed is %f \n", first);
+}
+else{
+System.out.print("\nFirst dissqualified\n");
+}
+if(Sec>Average) {
+System.out.printf("\nSecond qualified \nHis speed is %f \n", Sec);
+
+}
+else{
+System.out.print("\nSecond dissqualified\n");
+}
+if(Third>Average) {
+System.out.printf("\nThird qualified \nHis speed is %f\n ", Third);
+}
+else{
+System.out.printf("\nThird dissqualified\n");
+}
+if(fourth>Average) {
+System.out.printf("\nfourth qualified \nHis speed is %f \n", fourth);
+}
+else{
+System.out.print("\nFourth dissqualified\n");
+}
+if(fifth>Average) {
+System.out.printf("\nfifth qualified \nHis speed is %f\n ", fifth);
+}
+else{
+System.out.print("\nfifth dissqualified\n");
+}
+}
+}

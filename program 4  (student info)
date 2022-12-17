@@ -1,0 +1,57 @@
+Question: Create a class
+'Student' with three data
+members which are
+name, age and address.
+The constructor of
+the class assigns default
+values name as
+"unknown",
+age as '0' and address as
+"not available". It has two
+members with the same
+name 'setInfo'. First
+method
+has two parameters for
+name and age and assigns
+the
+same whereas the second
+method takes has three
+parameters which are
+assigned to name, age and
+address respectively. Print
+the name, age and address
+of 10 students. Hint -
+Use array of objects.
+
+code:
+
+public class students{
+String name;
+int age;
+String address;
+
+students(String n, int age, String add){
+name = n;
+this.age = age;
+address= add;
+}
+
+students(){
+name = "Unknown";
+age = 0;
+address = "not available";
+}
+void print(){
+System.out.println(name);
+System.out.println(age);
+System.out.println(address);
+}
+
+public static void main(String args[]){
+students s1 = new students();
+students s2 = new students("om",10,"chembur");
+students s3 = new students("som",20,"chemburi");
+s1.print();
+s2.print();
+s3.print();
+} }

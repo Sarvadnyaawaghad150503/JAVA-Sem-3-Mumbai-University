@@ -1,0 +1,37 @@
+Question : -Write a program that
+would print the
+information
+(name, year of joining,
+salary, address) of three
+employees by creating a
+class named 'Employee'.
+The output should be as
+shown
+
+code:
+
+class Employee {
+String empName;
+int empYear;
+String empAddress;
+Employee(String name, int year, String address)
+{
+empName = name;
+empYear = year;
+empAddress = address;
+}
+void display()
+{
+System.out.println(empName+" "+empYear+” "+empAddress);
+}
+public static void main(String args[]) {
+Employee emp1 = new Employee("om",2003,"nagpur");
+Employee emp2 = new Employee("param", 2004, "Pune");
+Employee emp3 = new Employee("ameya",2003,"nashik");
+System.out.println("Name Year of joining Address");
+System.out.println();
+emp1.display();
+emp2.display();
+emp3.display();
+}
+}

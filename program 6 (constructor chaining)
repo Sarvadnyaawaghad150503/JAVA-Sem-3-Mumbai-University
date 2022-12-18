@@ -1,0 +1,49 @@
+Question : -Write a Java program to
+illustrate Constructor
+Chaining.
+
+Code:
+class constructor {
+constructor(){
+this("SHAILESH");
+System.out.println("\ndefault constructor called\n");
+}
+constructor(String name){
+this("Sarvadnya",19);
+System.out.println("second constructor called\n");
+}
+constructor(String name,int age){
+System.out.println("third constructor called\n");
+}
+public static void main(String[] args) {
+System.out.println("Sarvadnya_Awaghad_D10A_05");
+new constructor();
+}}
+
+public class base
+{
+base()
+{ this(5);
+System.out.println("Parent Default Constructor is called!!\n"); }
+base(int x) {
+System.out.println("Parent Parameterized Constructor is called!!\n");
+}
+}
+public class derived extends base
+{
+derived() {
+this(7);
+System.out.println("Derived Default Constructor is called!!\n");}
+derived(int y) {
+super();
+System.out.println("Derived Parameterized Constructor is called!!\n");
+}
+}
+
+public class Main
+{
+// instance variables - replace the example below with your own
+public static void main(String args[]) {
+System.out.println("Sarvadnya_Awaghad_D10A_05");
+new derived();}
+}

@@ -1,0 +1,74 @@
+Question:
+- Create an interface
+vehicle and classes like
+bicycle,
+car, bike etc, having
+common functionalities
+and put
+all the common
+functionalities in the
+interface. Classes
+like Bicycle, Bike, car etc
+implement all these
+functionalities in their
+own class in their own
+way
+
+
+code:
+
+interface vehicle{
+void start();
+void stop();
+void max_speed();
+}
+class bicycle implements vehicle{
+public void start(){
+System.out.println("Starting Bicycle");
+}
+public void stop(){
+System.out.println("Stopping bicycle..");
+}
+public void max_speed(){
+System.out.println("max speed is 15km/hr");
+}
+}
+class car implements vehicle{
+public void start(){
+System.out.println("Starting car");
+}
+public void stop(){
+System.out.println("Stopping car..");
+}
+public void max_speed(){
+System.out.println("max speed is 80km/hr");
+}
+}
+class truck implements vehicle{
+public void start(){
+System.out.println("Starting truck");
+
+}
+public void stop(){
+System.out.println("Stopping truck..");
+}
+public void max_speed(){
+System.out.println("max speed is 60 km/hr");
+}
+}
+class Main{
+public static void main(String args []){
+vehicle b = new bicycle();
+vehicle c=new car();
+vehicle t=new truck();
+b.start();
+b.stop();
+b.max_speed();
+c.start();
+c.stop();
+c.max_speed();
+t.start();
+t.stop();
+t.max_speed();
+}
+}

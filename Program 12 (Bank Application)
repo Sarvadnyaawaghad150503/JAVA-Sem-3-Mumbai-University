@@ -1,3 +1,19 @@
+Question: 4) Assume that two
+brothers, Joe and John,
+share a
+common bank account.
+They both can,
+independently,
+read the balance, make a
+deposit, and withdraw
+some
+money. Implement
+java application
+demonstrate how
+the transaction in a bank
+can be carried out
+concurrently.
+
 Code:
 
 class Bank {
@@ -37,5 +53,6 @@ public static void main(String[] args){
 System.out.println("Sarvadnya_Awaghad_D10A_05");
 System.out.println("");
 System.out.println(""); Bank obj = new Bank();
-obj.withdrawn("Sai", 200); obj.withdrawn("Ram", 360);
+obj.withdrawn("Joe", 200);
+obj.withdrawn("John", 360);
 }}
